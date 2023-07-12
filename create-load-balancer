@@ -21,7 +21,7 @@
       "api_endpoint_rules": []
     },
     "app_firewall": {
-      "name": "string",
+      "name": "{{namespace}}-afw",
       "namespace": "{{namespace}}",
       "tenant": "{{tenant}}"
     },
@@ -74,13 +74,13 @@
     "default_route_pools": [
       {
         "cluster": {
-          "name": "string",
+          "name": "{{namespace}}-cluster",
           "namespace": "{{namespace}}",
           "tenant": "{{tenant}}"
         },
         "endpoint_subsets": {},
         "pool": {
-          "name": "string",
+          "name": "endpoint-pool",
           "namespace": "{{namespace}}",
           "tenant": "{{tenant}}"
         },
@@ -122,7 +122,7 @@
     "enable_malicious_user_detection": {},
     "enable_trust_client_ip_headers": {
       "client_ip_headers": [
-        "string"
+        "ip-header"
       ]
     },
     "graphql_rules": [],
@@ -194,7 +194,7 @@
       {
         "custom_route_object": {
           "route_ref": {
-            "name": "string",
+            "name": "{{namespace}}-route",
             "namespace": "{{namespace}}",
             "tenant": "{{tenant}}"
           }
@@ -258,7 +258,7 @@
         "simple_route": {
           "advanced_options": {
             "app_firewall": {
-              "name": "string",
+              "name": "{{namespace}}-afw",
               "namespace": "{{namespace}}",
               "tenant": "{{tenant}}"
             },
@@ -306,7 +306,7 @@
             "inherited_waf": {},
             "mirror_policy": {
               "origin_pool": {
-                "name": "string",
+                "name": "mypool",
                 "namespace": "{{namespace}}",
                 "tenant": "{{tenant}}"
               },
@@ -369,13 +369,13 @@
           "origin_pools": [
             {
               "cluster": {
-                "name": "string",
+                "name": "pool-cluster",
                 "namespace": "{{namespace}}",
                 "tenant": "{{tenant}}"
               },
               "endpoint_subsets": {},
               "pool": {
-                "name": "string",
+                "name": "endpoint-pool",
                 "namespace": "{{namespace}}",
                 "tenant": "{{tenant}}"
               },
@@ -458,7 +458,7 @@
           ],
           "exclude_bot_name_contexts": [
             {
-              "bot_name": "string"
+              "bot_name": "excluded-bot"
             }
           ],
           "exclude_signature_contexts": [
