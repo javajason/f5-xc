@@ -1,0 +1,495 @@
+{
+  "metadata": {
+    "annotations": {},
+    "description": "",
+    "disable": false,
+    "labels": {},
+    "name": "{{namespace}}-lb2",
+    "namespace": "{{namespace}}"
+  },
+  "spec": {
+    "add_location": true,
+    //"advertise_on_public": {
+    //  "public_ip": {
+    //    "name": "string",
+    //    "namespace": "{{namespace}}",
+    //    "tenant": "{{tenant}}"
+    //  }
+    //},
+    "advertise_on_public_default_vip": {},
+    "api_protection_rules": {
+      "api_endpoint_rules": []
+    },
+    "app_firewall": {
+      "name": "string",
+      "namespace": "{{namespace}}",
+      "tenant": "{{tenant}}"
+    },
+    "blocked_clients": [
+      {
+        "actions": [
+          "SKIP_PROCESSING_WAF"
+        ],
+        "as_number": 0,
+        "bot_skip_processing": {},
+        "expiration_timestamp": "2019-08-24T14:15:22Z",
+        "http_header": {
+          "headers": [
+            {
+              "exact": "string",
+              "invert_match": true,
+              "name": "string",
+              "presence": true,
+              "regex": "string"
+            }
+          ]
+        },
+        "ip_prefix": "10.1.1.0/24",
+        "metadata": {
+          "description": "string",
+          "name": "string"
+        },
+        "skip_processing": {},
+        "user_identifier": "string",
+        "waf_skip_processing": {}
+      }
+    ],
+    "cors_policy": {
+      "allow_credentials": true,
+      "allow_headers": "string",
+      "allow_methods": "string",
+      "allow_origin": [
+        "string"
+      ],
+      "allow_origin_regex": [
+        "string"
+      ],
+      "disabled": true,
+      "expose_headers": "string",
+      "maximum_age": 0
+    },
+    "csrf_policy": {
+      "all_load_balancer_domains": {}
+    },
+    "default_route_pools": [
+      {
+        "cluster": {
+          "name": "string",
+          "namespace": "{{namespace}}",
+          "tenant": "{{tenant}}"
+        },
+        "endpoint_subsets": {},
+        "pool": {
+          "name": "string",
+          "namespace": "{{namespace}}",
+          "tenant": "{{tenant}}"
+        },
+        "priority": 0,
+        "weight": 0
+      }
+    ],
+    "disable_client_side_defense": {},
+    "disable_rate_limit": {},
+    "domains": [
+      "lab-sec.f5demos.com"
+    ],
+    "enable_api_discovery": {
+      "enable_learn_from_redirect_traffic": {},
+      "sensitive_data_detection_rules": {
+        "custom_sensitive_data_detection_rules": [
+          {
+            "metadata": {
+              "description": "string",
+              "name": "string"
+            }
+          }
+        ],
+        "disabled_built_in_rules": [
+          {
+            "name": "string"
+          }
+        ]
+      }
+    },
+    "enable_ddos_detection": {
+      "disable_auto_mitigation": {}
+    },
+    "enable_ip_reputation": {
+      "ip_threat_categories": [
+        "SPAM_SOURCES"
+      ]
+    },
+    "enable_malicious_user_detection": {},
+    "enable_trust_client_ip_headers": {
+      "client_ip_headers": [
+        "string"
+      ]
+    },
+    "graphql_rules": [],
+    "https_auto_cert": {
+      "add_hsts": true,
+      "append_server_name": "f5demos.com",
+      "connection_idle_timeout": 0,
+      "default_loadbalancer": {},
+      "disable_path_normalize": {},
+      "header_transformation_type": {
+        "default_header_transformation": {}
+      },
+      "http_redirect": true,
+      "no_mtls": {},
+      "port": 0,
+      "tls_config": {
+        "default_security": {}
+      }
+    },
+    "more_option": {
+      "buffer_policy": {
+        "disabled": true,
+        "max_request_bytes": 0
+      },
+      "custom_errors": {},
+      "disable_default_error_pages": true,
+      "disable_path_normalize": {},
+      "idle_timeout": 0,
+      "max_request_header_size": 0,
+      "request_headers_to_add": [
+        {
+          "append": true,
+          "name": "string",
+          "value": "string"
+        }
+      ],
+      "request_headers_to_remove": [
+        "string"
+      ],
+      "response_headers_to_add": [
+        {
+          "append": true,
+          "name": "string",
+          "value": "string"
+        }
+      ],
+      "response_headers_to_remove": [
+        "string"
+      ]
+    },
+    "no_challenge": {},
+    "no_service_policies": {},
+    "origin_server_subset_rule_list": {},
+    "protected_cookies": [
+      {
+        "add_httponly": {},
+        "disable_tampering_protection": {},
+        "enable_tampering_protection": {},
+        "ignore_httponly": {},
+        "ignore_max_age": {},
+        "ignore_samesite": {},
+        "ignore_secure": {},
+        "max_age_value": 0,
+        "name": "string"
+      }
+    ],
+    "round_robin": {},
+    "routes": [
+      {
+        "custom_route_object": {
+          "route_ref": {
+            "name": "string",
+            "namespace": "{{namespace}}",
+            "tenant": "{{tenant}}"
+          }
+        },
+        "direct_response_route": {
+          "headers": [
+            {
+              "exact": "string",
+              "invert_match": true,
+              "name": "string",
+              "presence": true,
+              "regex": "string"
+            }
+          ],
+          "http_method": "ANY",
+          "incoming_port": {
+            "no_port_match": {},
+            "port": 0
+          },
+          "path": {
+            "path": "string",
+            "prefix": "string",
+            "regex": "string"
+          },
+          "route_direct_response": {
+            "response_body": "OK",
+            "response_code": 200
+          }
+        },
+        "redirect_route": {
+          "headers": [
+            {
+              "exact": "string",
+              "invert_match": true,
+              "name": "string",
+              "presence": true,
+              "regex": "string"
+            }
+          ],
+          "http_method": "ANY",
+          "incoming_port": {
+            "no_port_match": {},
+            "port": 0
+          },
+          "path": {
+            "path": "string",
+            "prefix": "string",
+            "regex": "string"
+          },
+          "route_redirect": {
+            "host_redirect": "string",
+            "path_redirect": "string",
+            "prefix_rewrite": "string",
+            "proto_redirect": "string",
+            "remove_all_params": {},
+            "replace_params": "string",
+            "response_code": 0,
+            "retain_all_params": {}
+          }
+        },
+        "simple_route": {
+          "advanced_options": {
+            "app_firewall": {
+              "name": "string",
+              "namespace": "{{namespace}}",
+              "tenant": "{{tenant}}"
+            },
+            "bot_defense_javascript_injection": {
+              "javascript_location": "AFTER_HEAD",
+              "javascript_tags": [
+                {
+                  "javascript_url": "string",
+                  "tag_attributes": [
+                    null
+                  ]
+                }
+              ]
+            },
+            "buffer_policy": {
+              "disabled": true,
+              "max_request_bytes": 0
+            },
+            "common_buffering": {},
+            "common_hash_policy": {},
+            "cors_policy": {
+              "allow_credentials": true,
+              "allow_headers": "string",
+              "allow_methods": "string",
+              "allow_origin": [
+                "string"
+              ],
+              "allow_origin_regex": [
+                "string"
+              ],
+              "disabled": true,
+              "expose_headers": "string",
+              "maximum_age": 0
+            },
+            "default_retry_policy": {},
+            "disable_location_add": true,
+            "disable_mirroring": {},
+            "disable_prefix_rewrite": {},
+            "disable_spdy": {},
+            "disable_web_socket_config": {},
+            "do_not_retract_cluster": {},
+            "enable_spdy": {},
+            "endpoint_subsets": {},
+            "inherited_bot_defense_javascript_injection": {},
+            "inherited_waf": {},
+            "mirror_policy": {
+              "origin_pool": {
+                "name": "string",
+                "namespace": "{{namespace}}",
+                "tenant": "{{tenant}}"
+              },
+              "percent": {
+                "denominator": "HUNDRED",
+                "numerator": 0
+              }
+            },
+            "prefix_rewrite": "string",
+            "priority": "DEFAULT",
+            "request_headers_to_add": [
+              {
+                "append": true,
+                "name": "string",
+                "secret_value": {
+                  "blindfold_secret_info": {}
+                },
+                "value": "string"
+              }
+            ],
+            "request_headers_to_remove": [
+              "string"
+            ],
+            "response_headers_to_remove": [
+              "string"
+            ],
+            "retract_cluster": {},
+            "specific_hash_policy": {
+              "hash_policy": [
+                {
+                  "cookie": {},
+                  "header_name": "string",
+                  "source_ip": true,
+                  "terminal": true
+                }
+              ]
+            },
+            "timeout": 0,
+            "web_socket_config": {
+              "use_websocket": true
+            }
+          },
+          "auto_host_rewrite": {},
+          "disable_host_rewrite": {},
+          "headers": [
+            {
+              "exact": "string",
+              "invert_match": true,
+              "name": "string",
+              "presence": true,
+              "regex": "string"
+            }
+          ],
+          "host_rewrite": "string",
+          "http_method": "ANY",
+          "incoming_port": {
+            "no_port_match": {},
+            "port": 0
+          },
+          "origin_pools": [
+            {
+              "cluster": {
+                "name": "string",
+                "namespace": "{{namespace}}",
+                "tenant": "{{tenant}}"
+              },
+              "endpoint_subsets": {},
+              "pool": {
+                "name": "string",
+                "namespace": "{{namespace}}",
+                "tenant": "{{tenant}}"
+              },
+              "priority": 0,
+              "weight": 0
+            }
+          ],
+          "path": {
+            "path": "string",
+            "prefix": "string",
+            "regex": "string"
+          }
+        }
+      }
+    ],
+    "single_lb_app": {
+      "enable_ddos_detection": {
+        "disable_auto_mitigation": {}
+      },
+      "enable_discovery": {
+        "enable_learn_from_redirect_traffic": {},
+        "sensitive_data_detection_rules": {
+          "custom_sensitive_data_detection_rules": [
+            {
+              "metadata": {
+                "description": "string",
+                "name": "string"
+              }
+            }
+          ],
+          "disabled_built_in_rules": [
+            {
+              "name": "string"
+            }
+          ]
+        }
+      },
+      "enable_malicious_user_detection": {}
+    },
+    "system_default_timeouts": {},
+    "trusted_clients": [
+      {
+        "actions": [
+          "SKIP_PROCESSING_WAF"
+        ],
+        "as_number": 0,
+        "bot_skip_processing": {},
+        "expiration_timestamp": "2019-08-24T14:15:22Z",
+        "http_header": {
+          "headers": [
+            {
+              "exact": "string",
+              "invert_match": true,
+              "name": "string",
+              "presence": true,
+              "regex": "string"
+            }
+          ]
+        },
+        "ip_prefix": "10.1.1.0/24",
+        "metadata": {
+          "description": "string",
+          "name": "string"
+        },
+        "skip_processing": {},
+        "user_identifier": "string",
+        "waf_skip_processing": {}
+      }
+    ],
+    "user_id_client_ip": {},
+    "waf_exclusion_rules": [
+      {
+        "any_domain": {},
+        "any_path": {},
+        "app_firewall_detection_control": {
+          "exclude_attack_type_contexts": [
+            {
+              "exclude_attack_type": "ATTACK_TYPE_NONE"
+            }
+          ],
+          "exclude_bot_name_contexts": [
+            {
+              "bot_name": "string"
+            }
+          ],
+          "exclude_signature_contexts": [
+            {
+              "context": "CONTEXT_ANY",
+              "context_name": "string",
+              "signature_id": 0
+            }
+          ],
+          "exclude_violation_contexts": [
+            {
+              "context": "CONTEXT_ANY",
+              "context_name": "string",
+              "exclude_violation": "VIOL_NONE"
+            }
+          ]
+        },
+        "exact_value": "string",
+        "expiration_timestamp": "2019-08-24T14:15:22Z",
+        "metadata": {
+          "description": "string",
+          "name": "string"
+        },
+        "methods": [
+          "ANY"
+        ],
+        "path_prefix": "string",
+        "path_regex": "string",
+        "suffix_value": "string",
+        "waf_skip_processing": {}
+      }
+    ]
+  }
+}
