@@ -4,7 +4,7 @@
     "description": "",
     "disable": false,
     "labels": {},
-    "name": "{{namespace}}-lb2",
+    "name": "{{namespace}}-lb3",
     "namespace": "{{namespace}}"
   },
   "spec": {
