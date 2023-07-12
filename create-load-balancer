@@ -9,13 +9,6 @@
   },
   "spec": {
     "add_location": true,
-    //"advertise_on_public": {
-    //  "public_ip": {
-    //    "name": "string",
-    //    "namespace": "{{namespace}}",
-    //    "tenant": "{{tenant}}"
-    //  }
-    //},
     "advertise_on_public_default_vip": {},
     "api_protection_rules": {
       "api_endpoint_rules": []
@@ -25,35 +18,6 @@
       "namespace": "{{namespace}}",
       "tenant": "{{tenant}}"
     },
-    "blocked_clients": [
-      {
-        "actions": [
-          "SKIP_PROCESSING_WAF"
-        ],
-        "as_number": 0,
-        "bot_skip_processing": {},
-        "expiration_timestamp": "2019-08-24T14:15:22Z",
-        "http_header": {
-          "headers": [
-            {
-              "exact": "string",
-              "invert_match": true,
-              "name": "string",
-              "presence": true,
-              "regex": "string"
-            }
-          ]
-        },
-        "ip_prefix": "10.1.1.0/24",
-        "metadata": {
-          "description": "string",
-          "name": "string"
-        },
-        "skip_processing": {},
-        "user_identifier": "string",
-        "waf_skip_processing": {}
-      }
-    ],
     "cors_policy": {
       "allow_credentials": true,
       "allow_headers": "string",
@@ -248,7 +212,7 @@
             "host_redirect": "string",
             "path_redirect": "string",
             "prefix_rewrite": "string",
-            "proto_redirect": "string",
+            "proto_redirect": "http",
             "remove_all_params": {},
             "replace_params": "string",
             "response_code": 0,
