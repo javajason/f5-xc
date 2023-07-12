@@ -1,0 +1,10 @@
+{
+  "aggs": {},
+  "end_time": "1690802418", // July 9, 2023
+  "limit": 100,
+  "namespace": "{{namespace}}",
+  "query": "{country=\"US\"}",
+  "scroll": true,
+  "sort": "DESCENDING",
+  "start_time": "1688901618" // July 31, 2023
+}
