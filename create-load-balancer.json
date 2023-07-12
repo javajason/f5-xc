@@ -55,7 +55,7 @@
     "disable_client_side_defense": {},
     "disable_rate_limit": {},
     "domains": [
-      "lab-sec.f5demos.com"
+      "lb3.lab-sec.f5demos.com"
     ],
     "enable_api_discovery": {
       "enable_learn_from_redirect_traffic": {},
