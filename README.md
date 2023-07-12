@@ -1,4 +1,4 @@
-# f5-xc
+# F5-XC API Collection
 
 Steps:
 1. Spin up "[Agility 2022] F5XC Security" (version 1) UDF blueprint.
