@@ -1,0 +1,4 @@
+# Requires auth header:
+# Authorization: APIToken {{api-token}}
+
+GET https://{{hostname}}/api/config/namespaces/{{namespace}}/http_loadbalancers
